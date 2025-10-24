@@ -9,6 +9,8 @@ import com.siakad.repository.StudentRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -34,6 +36,16 @@ class EnrollmentServiceStubTest {
                     return s;
                 }
                 return null;
+            }
+
+            @Override
+            public void update(Student student) {
+
+            }
+
+            @Override
+            public List<Course> getCompletedCourses(String studentId) {
+                return List.of();
             }
         };
 
